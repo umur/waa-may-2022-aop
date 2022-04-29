@@ -5,7 +5,7 @@ You can continue to your last lab assignment to implement followings.
 
 ###  Requirements
 --- 
-* Make a `ActivityLog` database table (`id,date,operation,duration`) that will store all the operations executed in your project. 
+* Make a `ActivityLog` database table (`id,date,operation,duration`) that will store all methods that have `ExecutionTime` annotations.
 * Make an `Aspect` that has an annotation pointcut `@ExecutionTime`, when placed on a method, it calculates the time taken to complete that method and writes it to `ActivityLog` table.
 * Make an `Aspect` that has an pointcut for classes in `edu.miu.service` package to check if `POST` requests has `AOP-IS-AWESOME` header. If the header is not present then throw a `AopIsAwesomeHeaderException`.
 
