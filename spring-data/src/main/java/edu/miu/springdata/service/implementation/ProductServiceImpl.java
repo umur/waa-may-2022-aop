@@ -2,8 +2,7 @@ package edu.miu.springdata.service.implementation;
 
 import edu.miu.springdata.DTO.ProductDto;
 import edu.miu.springdata.DTO.ReviewDto;
-import edu.miu.springdata.entity.bidirectional.Product;
-import edu.miu.springdata.entity.bidirectional.Review;
+import edu.miu.springdata.entity.Product;
 import edu.miu.springdata.repository.ProductRepo;
 import edu.miu.springdata.service.ProductService;
 import org.modelmapper.ModelMapper;

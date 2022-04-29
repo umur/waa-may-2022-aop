@@ -1,10 +1,9 @@
 package edu.miu.springdata.service.implementation;
 
 import edu.miu.springdata.DTO.AddressDto;
-import edu.miu.springdata.entity.bidirectional.Address;
+import edu.miu.springdata.entity.Address;
 import edu.miu.springdata.repository.AddressRepo;
 import edu.miu.springdata.service.AddressService;
-import lombok.AllArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

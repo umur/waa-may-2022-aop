@@ -1,4 +1,4 @@
-package edu.miu.springdata.entity.bidirectional;
+package edu.miu.springdata.entity;
 
 import lombok.Data;
 

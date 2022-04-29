@@ -1,6 +1,5 @@
-package edu.miu.springdata.entity.bidirectional;
+package edu.miu.springdata.entity;
 
-import edu.miu.springdata.DTO.ProductDto;
 import lombok.Data;
 
 import javax.persistence.*;

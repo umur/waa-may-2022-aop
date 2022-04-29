@@ -1,11 +1,10 @@
 package edu.miu.springdata.service.implementation;
 
 import edu.miu.springdata.DTO.UserDto;
-import edu.miu.springdata.entity.bidirectional.User;
+import edu.miu.springdata.entity.User;
 import edu.miu.springdata.entity.unidirectional.UserUni;
 import edu.miu.springdata.repository.UserRepo;
 import edu.miu.springdata.service.UserService;
-import lombok.AllArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
