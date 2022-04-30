@@ -6,8 +6,10 @@ import lombok.AllArgsConstructor;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.stereotype.Component;
 
+import java.lang.reflect.Modifier;
 import java.time.LocalDateTime;
 import java.util.Date;
 
@@ -27,6 +29,7 @@ public class ActivityLogAspect {
         long executionTime = System.currentTimeMillis() - start;
 
         System.out.println(joinPoint.getSignature() + " executed in " + executionTime + "ms");
+
         ActivityLog activityLog = new ActivityLog();
         activityLog.setDate(LocalDateTime.now());
         activityLog.setDuration(executionTime);
