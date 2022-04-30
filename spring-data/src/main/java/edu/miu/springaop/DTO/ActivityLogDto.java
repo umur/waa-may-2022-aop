@@ -22,4 +22,11 @@ public class ActivityLogDto {
 
     }
 
+    public ActivityLogDto(LocalDate d, String operation, double duration) {
+        this.date = d;
+        this.operation = operation;
+        this.duration = duration;
+    }
+
+
 }

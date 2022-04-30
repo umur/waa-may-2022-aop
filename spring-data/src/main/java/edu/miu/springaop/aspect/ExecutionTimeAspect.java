@@ -18,8 +18,6 @@ import java.time.LocalDate;
 public class ExecutionTimeAspect {
 
     @Autowired
-    private HttpServlet httpServlet;
-    @Autowired
     private ActivityLogService activityLogService;
 
   @Pointcut("@annotation(edu.miu.springaop.aspect.annotation.ExecutionTime)")
@@ -36,9 +34,9 @@ public class ExecutionTimeAspect {
         String operation = proceedingJoinPoint.getSignature().getDeclaringType().getSimpleName() + " ---- " + proceedingJoinPoint.getSignature().getName();
         double duration = finish - start;
 
-        ActivityLogDto a = new ActivityLogDto(1, now, operation, duration);
+        ActivityLogDto a = new ActivityLogDto(now, operation, duration);
         activityLogService.save(a);
-        
+
         return result;
     }
 }
