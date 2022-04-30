@@ -2,7 +2,6 @@ package edu.miu.springaop.service.implementation;
 
 import edu.miu.springaop.DTO.ReviewDto;
 import edu.miu.springaop.entity.Review;
-import edu.miu.springaop.entity.unidirectional.ReviewUni;
 import edu.miu.springaop.repository.ReviewRepo;
 import edu.miu.springaop.service.ReviewService;
 import org.modelmapper.ModelMapper;

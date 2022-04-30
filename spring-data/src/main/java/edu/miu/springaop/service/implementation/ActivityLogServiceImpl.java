@@ -17,9 +17,9 @@ import java.util.List;
 public class ActivityLogServiceImpl implements ActivityLogService {
 
     @Autowired
-    private static ActivityLogRepo activityLogRepo;
+    private ActivityLogRepo activityLogRepo;
     @Autowired
-    private static ModelMapper modelMapper;
+    private ModelMapper modelMapper ;
 
     @Override
     public void save(ActivityLogDto a) {

@@ -15,7 +15,7 @@ import java.util.List;
 public class ActivityLogController {
 
     @Autowired
-    private static ActivityLogService activityLogService;
+    private ActivityLogService activityLogService;
 
     @ExecutionTime
     @PostMapping

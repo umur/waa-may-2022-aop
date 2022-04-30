@@ -2,7 +2,6 @@ package edu.miu.springaop.service.implementation;
 
 import edu.miu.springaop.DTO.UserDto;
 import edu.miu.springaop.entity.User;
-import edu.miu.springaop.entity.unidirectional.UserUni;
 import edu.miu.springaop.repository.UserRepo;
 import edu.miu.springaop.service.UserService;
 import org.modelmapper.ModelMapper;

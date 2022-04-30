@@ -1,6 +1,5 @@
 package edu.miu.springaop.DTO;
 
-import edu.miu.springaop.entity.unidirectional.ProductUni;
 import lombok.Data;
 
 import java.util.List;
@@ -9,5 +8,5 @@ import java.util.List;
 public class CategoryDto {
     private int id;
     private String name;
-    private List<ProductUni> productUnis;
+    private List<ProductDto> productUnis;
 }

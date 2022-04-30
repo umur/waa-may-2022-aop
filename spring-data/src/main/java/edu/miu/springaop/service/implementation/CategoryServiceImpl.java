@@ -2,7 +2,6 @@ package edu.miu.springaop.service.implementation;
 
 import edu.miu.springaop.DTO.CategoryDto;
 import edu.miu.springaop.entity.Category;
-import edu.miu.springaop.entity.unidirectional.CategoryUni;
 import edu.miu.springaop.repository.CategoryRepo;
 import edu.miu.springaop.service.CategoryService;
 import org.modelmapper.ModelMapper;
