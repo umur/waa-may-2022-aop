@@ -38,7 +38,7 @@ public class ExecutionTimeAspect {
                 [%s | method: %s]
                 """.formatted(proceedingJoinPoint.getTarget().getClass(), proceedingJoinPoint.getSignature().getName());
 
-//        activityLogRepository.save(new ActivityLog(LocalDateTime.now(), operation, duration));
+        activityLogRepository.save(new ActivityLog(LocalDateTime.now(), operation, duration));
 
 //        System.out.println(duration.toMillis());
 
