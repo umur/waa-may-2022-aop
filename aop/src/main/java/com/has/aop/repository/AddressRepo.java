@@ -6,6 +6,5 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
 public interface AddressRepo extends CrudRepository<Address,Integer> {
-    @Query(value = "SELECT e FROM Employee e WHERE e.lastName = :lastname")
-    public List<Address> findByZip(String lastname);
+
 }
