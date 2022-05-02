@@ -1,5 +1,7 @@
 package com.example.datademo.controller;
 
+import com.example.datademo.annotation.ExecutionTime;
+import com.example.datademo.annotation.PostCheck;
 import com.example.datademo.entity.Product;
 import com.example.datademo.service.ProductService;
 import org.springframework.data.repository.query.Param;
@@ -20,11 +22,14 @@ public class ProductController {
     }
 
     @PostMapping
+    @PostCheck
+    @ExecutionTime
     public ResponseEntity<String> save(@RequestBody Product p){
         productService.save(p);
         return ResponseEntity.ok("Success");
     }
     @GetMapping
+    @ExecutionTime
     public ResponseEntity<Iterable<Product>> getAll(@RequestParam Optional<Double> minPrice,@RequestParam Optional<String> category, @RequestParam Optional<Double> maxPrice,@RequestParam Optional<String> keyword,@RequestParam Optional<Integer> user_id){
         if (minPrice.isPresent()) {
             Iterable<Product> list = productService.findProduct(minPrice.get());
