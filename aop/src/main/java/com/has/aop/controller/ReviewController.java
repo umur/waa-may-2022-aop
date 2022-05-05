@@ -32,7 +32,7 @@ public class ReviewController {
         return ReviewService.getAll();
     }
     @GetMapping("/{id}")
-    public ReviewDto getById(@RequestParam int id) {
+    public ReviewDto getById(@PathVariable int id) {
         return ReviewService.getById(id);
     }
 
