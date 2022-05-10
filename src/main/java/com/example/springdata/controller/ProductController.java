@@ -15,6 +15,7 @@ import java.util.Map;
 @RestController
 @RequestMapping("/api/v1/products")
 @AllArgsConstructor
+@CrossOrigin
 public class ProductController {
 
     private final ProductService productService;
@@ -33,7 +34,7 @@ public class ProductController {
             return ResponseEntity.ok(productService.getAllByName(name));
         }
 
-        return ResponseEntity.ok(new ArrayList<>());
+        return ResponseEntity.ok(productService.getAll());
     }
 
     @PostMapping
@@ -44,6 +45,11 @@ public class ProductController {
     @GetMapping("/users/{userId}")
     public ResponseEntity<List<ProductDto>> findByUserId(@PathVariable int userId) {
         return ResponseEntity.ok(productService.getAllByUserId(userId));
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<ProductDto> findById(@PathVariable int id) {
+        return ResponseEntity.ok(productService.getById(id));
     }
 
 }

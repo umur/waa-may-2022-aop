@@ -25,9 +25,9 @@ public class AopIsAwesomeHeaderAspect {
     public Object checkingAopIsAwesomeHeader(ProceedingJoinPoint joinPoint) throws Throwable {
         System.out.println(request.getMethod());
         System.out.println(request.getHeader("AOP-IS-AWESOME"));
-        if (request.getMethod().equals(HttpMethod.POST.name()) && request.getHeader("AOP-IS-AWESOME") == null) {
-            throw new AopIsAwesomeHeaderException("AOP-IS-AWESOME header is missing");
-        }
+//        if (request.getMethod().equals(HttpMethod.POST.name()) && request.getHeader("AOP-IS-AWESOME") == null) {
+//            throw new AopIsAwesomeHeaderException("AOP-IS-AWESOME header is missing");
+//        }
 
         return joinPoint.proceed();
     }
